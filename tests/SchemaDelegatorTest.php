@@ -23,7 +23,7 @@ class SchemaDelegatorTest extends TestCase
         $instance = new SchemaDelegator($schema);
 
         $this->assertInstanceOf(SchemaDelegator::class, $instance);
-        $this->assertEquals(Executor::getPromiseAdapter(), $instance->getPromiseAdapter());
+        $this->assertEquals(Executor::getDefaultPromiseAdapter(), $instance->getPromiseAdapter());
         $this->assertEquals($schema, $instance->getSchema());
     }
 

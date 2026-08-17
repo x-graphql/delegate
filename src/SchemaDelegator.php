@@ -19,7 +19,7 @@ final readonly class SchemaDelegator implements SchemaDelegatorInterface
 
     public function __construct(private Schema $schema, PromiseAdapter $promiseAdapter = null)
     {
-        $this->promiseAdapter = $promiseAdapter ?? Executor::getPromiseAdapter();
+        $this->promiseAdapter = $promiseAdapter ?? Executor::getDefaultPromiseAdapter();
     }
 
     /**
